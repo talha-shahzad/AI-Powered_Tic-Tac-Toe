@@ -1,6 +1,26 @@
 def analyzeboard():
   return 1
-  
+def CompTurn():
+  return 1
+def ConstBoard(board):
+  print("current state of the board \n\n")
+
+  for i in range(0,9):
+    if((i>0) and (i%3==0)):
+      print('\n')
+    if(board[i]==0):
+      print('_ ')
+    if(board[i]==-1):
+      print('X ')
+    if(board[i]==1):
+      print('O ')
+
+def User1Turn():
+  return 1
+def User2Turn():
+  return 1
+
+
 def main():
   choice = input("enter 1 if you want to play single player , 2 for Multi player: ");
   choice=int(choice)
@@ -13,5 +33,30 @@ def main():
     for i in range(0,9):
       if(analyzeboard(board)!=0):
         break;
+      if((i+player)%2==0):
+        CompTurn(board);
+      else:
+        ConstBoard(board);
+        User1Turn(board);
+    else:
+      for i in range(0,9):
+        if(analyzeboard(board)!=0):
+          break;
+        if(i%2==0):
+          CompTurn(board);
+        else:
+          ConstBoard(board);
+          User2Turn(board);
+  x=analyzeboard(board)
+  if(x==0):
+    ConstBoard(board);
+    print("DRAW");
+  if(x==-1):
+    ConstBoard(board);
+    print("PLayer X wins ");
+  if(x==1):
+    ConstBoard(board);
+    print("Player O wins");
+
     
   
