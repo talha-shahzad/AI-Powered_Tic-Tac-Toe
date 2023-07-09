@@ -1,5 +1,5 @@
 def analyzeboard():
-  return 1
+  return int(0)
 def CompTurn():
   return 1
 def ConstBoard(board):
@@ -15,10 +15,22 @@ def ConstBoard(board):
     if(board[i]==1):
       print('O ')
 
-def User1Turn():
-  return 1
-def User2Turn():
-  return 1
+def User1Turn(board):
+  pos=input('Enter a position for X from [1,2......9]');
+  pos=int(pos)-1;
+  if(board[pos]!=0):
+    print("Wrong Move")
+    exit(0);
+    board[pos-1]=-1
+
+
+def User2Turn(board):
+  pos=input('Enter a position for O from [1,2......9]');
+  pos=int(pos)-1;
+  if(board[pos]!=0):
+    print("Wrong Move")
+    exit(0);
+    board[pos-1]=1
 
 
 def main():
@@ -57,6 +69,3 @@ def main():
   if(x==1):
     ConstBoard(board);
     print("Player O wins");
-
-    
-  
