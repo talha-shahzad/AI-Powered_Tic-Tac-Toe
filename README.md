@@ -16,3 +16,10 @@ Invite friends or family to play Tic Tac Toe in a head-to-head battle. With a us
 - **Statistics and Leaderboards:** Track your progress with in-depth game statistics and compete for the top spot on global leaderboards.
 
 Embark on a journey of strategic thinking and friendly competition with our AI-powered Tic Tac Toe game. Whether you're honing your skills against an AI opponent or challenging friends, this modern twist on a classic game guarantees hours of entertainment and brain-teasing fun.
+
+``` bash
+#To run the program you must have python installed
+#Check it by following command
+python --version
+#Now execute the file using the command below
+python main.py
